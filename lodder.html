@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loder</title>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+    }
+.lodder {
+  width: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #ffa516 50%, #0000), top/8px 8px no-repeat, conic-gradient(#0000 30%, #ffa516);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 5px), #000 0);
+
+  animation: rotate 1s linear infinite; 
+}
+
+
+/* any one can use */
+
+/* @keyframes rotate {
+ 100%{
+  transform: rotate(1turn);
+ }
+} */
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="lodder">
+
+  </div>
+</body>
+</html>
