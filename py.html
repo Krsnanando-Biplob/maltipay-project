@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Image Slider</title>
+    <style>
+      
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+.section-content {
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Slider-title {
+    font-size: 10rem;
+    font-weight: 900;
+    letter-spacing: 0.35rem;
+    color: #fff;
+    text-shadow: .2rem .3rem .3rem #000;
+}
+
+.image-icon i {
+    font-size: 25rem;
+    color: #7FEBFF;
+    position: absolute;
+    transform: translate(-50%, -50%)scale(0);
+    text-shadow: .2rem .3rem .3rem #000;
+}
+
+.image-icon i.slide {
+    transform: translate(-50%, -50%)scale(1);
+}
+.section-content h5{
+  font-size: 30px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0.010em 0.12em 0.12em #000;
+}
+
+    </style>
+  </head>
+
+  <body>
+    <section class="section-content">
+      <h5>Krsnanando Biplob</h5>
+      <h1 class="Slider-title">Image Slider</h1>
+      <div class="image-icon">
+        <i class="fas fa-egg slide"></i>
+        <i class="fas fa-bread-slice"></i>
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-drumstick-bite"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-ice-cream"></i>
+        <i class="fas fa-pepper-hot"></i>
+      </div>
+      <div>
+        <h1>My favourite Image slider</h1>
+      </div>
+    </section>
+    <script>
+      
+/* */
+const icons = document.querySelectorAll('.image-icon i');
+
+let i = 1;
+
+setInterval(() => {
+    i++;
+
+    const icon = document.querySelector('.image-icon .slide');
+    icon.classList.remove('slide');
+
+    if (i > icons.length) {
+        icons[0].classList.add('slide');
+        i = 1;
+    }
+    icon.nextElementSibling.classList.add('slide');
+}, 3000);
+
+    </script>
+  </body>
+</html>
