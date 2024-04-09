@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      height: 100vh;
+      overflow: hidden;
+
+    }
+    h1{
+      font-size: 7em;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.08em;
+    }
+    h1::before{
+      content: "";
+      height: 100%;
+      position: absolute;
+      left: 110%;
+      width: 120%;
+      background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100%);
+      animation: ani 5.5s linear infinite alternate;
+
+    }
+    @keyframes ani{
+      0%{
+        left: 10%;
+      }
+      100%{
+        right: 0%;
+      }
+    }
+    
+    h1 span{
+      color: #0f0f
+    }
+  </style>
+</head>
+<body>
+  <h1><span>K</span>rsn<span>a</span>nan<span>do</span> <span>B</span>i<span>pl</span>o<span>b</span><span>....</span> </h1>
+</body>
+</html>
